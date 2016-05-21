@@ -247,6 +247,7 @@ function create_config( )
     "invite",
     "all",
     "time",
+    "typing",
     "lockfwd",
     "leave_ban",
 	"supergroup",
