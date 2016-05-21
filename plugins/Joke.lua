@@ -1,7 +1,7 @@
 local database = 'http://umbrella.shayan-soft.ir/txt/'
 local function run(msg)
 	local res = http.request(database.."joke.db")
-	if string.match(res, '@UmbrellaTeam') then res = string.gsub(res, '@kiavabots', "")
+	if string.match(res, '@kiavabots') then res = string.gsub(res, '@kiavabots', "")
  end
 	local joke = res:split(",")
 	return joke[math.random(#joke)]
