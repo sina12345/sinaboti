@@ -289,7 +289,7 @@ end
 end
 return {
   patterns = {
-    "^[!/#]اطلاعاتش$",
+    "^فعالان گروه$",
   }, 
   pre_process = pre_process,
   cron = cron,
