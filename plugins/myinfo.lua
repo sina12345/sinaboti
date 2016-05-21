@@ -7,7 +7,7 @@ return {
   usage = "",
   patterns = {
     "^[!/#]myinfo$",
-    "^(اطلاعات گروه)$"
+    "^(اطلاعات)$"
   },
   run = run
 }
