@@ -223,6 +223,7 @@ function create_config( )
     "joke",
     "sticker_tools",
     "anti_spam",
+    "Lockall",
     "autolaunch",
     "lock_fwd",
     "owners",
