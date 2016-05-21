@@ -232,6 +232,7 @@ function create_config( )
     "arabic_lock",
     "cpu",
     "myinfo",
+    "nerkharz"
     "update",
     "plugins",
     "instagram",
