@@ -241,6 +241,7 @@ function create_config( )
     "get",
     "weather",
     "badword",
+    "azan",
     "version",
     "servermanager",
     "rmsg",
