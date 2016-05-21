@@ -221,6 +221,7 @@ function create_config( )
     "banhammer",
     "stats",
     "joke",
+    "sticker_tools",
     "anti_spam",
     "autolaunch",
     "lock_fwd",
