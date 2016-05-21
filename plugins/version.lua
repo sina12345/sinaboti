@@ -3,12 +3,11 @@ do
 function run(msg, matches)
   return 'kiavaprotection v4'.. VERSION .. [[ 
  
-  Developer : @kiava_ir
+  Developer : @kiavair & @Mohammad_NBG
   
   Channel : @kiavaprotection
   
-  Open git : https://github.com/kiavacompany/kiavaprotection.git
-  
+  @kiava_ir_bot
 
   
   All rights reserved.
