@@ -80,7 +80,7 @@ return {
     "kos (.*)",
     "kon (.*)",
     "Kos (.*)",
-    'Kon (.*)",
+    "Kon (.*)",
     "kir",
     "kos",
     "kon",
