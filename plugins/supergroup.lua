@@ -410,34 +410,6 @@ local function unlock_group_sticker(msg, data, target)
   end
 end
 
-local function lock_group_badw(msg, data, target)
-  if not is_momod(msg) then
-    return
-  end
-  local group_badw_lock = data[tostring(target)]['settings']['lock_badw']
-  if group_badw_lock == 'yes' then
-    return 'fosh posting is already locked'
-  else
-    data[tostring(target)]['settings']['lock_badw'] = 'yes'
-    save_data(_config.moderation.data, data)
-    return 'fosh posting has been locked'
-  end
-end
-
-local function unlock_group_badw(msg, data, target)
-  if not is_momod(msg) then
-    return
-  end
-  local group_badw_lock = data[tostring(target)]['settings']['lock_badw']
-  if group_badw_lock == 'no' then
-    return 'fosh posting is already unlocked'
-  else
-    data[tostring(target)]['settings']['lock_badw'] = 'no'
-    save_data(_config.moderation.data, data)
-    return 'fosh posting has been unlocked'
-  end
-end
-
 local function lock_group_contacts(msg, data, target)
   if not is_momod(msg) then
     return
@@ -588,17 +560,12 @@ end
 		end
 	end
 	if data[tostring(target)]['settings'] then
-		if not data[tostring(target)]['settings']['lock_badw'] then
-			data[tostring(target)]['settings']['lock_badw'] = 'no'
-		end
-	end
-	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_member'] then
 			data[tostring(target)]['settings']['lock_member'] = 'no'
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "SuperGroup settings:\nLock links : "..settings.lock_link.."\nLock fosh : "..settings.lock_badw.."\nLock flood: "..settings.flood.."\nFlood sensitivity : "..NUM_MSG_MAX.."\nLock spam: "..settings.lock_spam.."\nLock Arabic: "..settings.lock_arabic.."\nLock Member: "..settings.lock_member.."\nLock RTL: "..settings.lock_rtl.."\nLock Tgservice : "..settings.lock_tgservice.."\nLock sticker: "..settings.lock_sticker.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
+  local text = "SuperGroup settings:\nLock links : "..settings.lock_link.."\nLock flood: "..settings.flood.."\nFlood sensitivity : "..NUM_MSG_MAX.."\nLock spam: "..settings.lock_spam.."\nLock Arabic: "..settings.lock_arabic.."\nLock Member: "..settings.lock_member.."\nLock RTL: "..settings.lock_rtl.."\nLock Tgservice : "..settings.lock_tgservice.."\nLock sticker: "..settings.lock_sticker.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
   return text
 end
 
@@ -1699,10 +1666,6 @@ local function run(msg, matches)
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked arabic ")
 				return lock_group_arabic(msg, data, target)
 			end
-			if matches[2] == 'badw' then
-				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked fosh ")
-				return lock_group_badw(msg, data, target)
-			end
 			if matches[2] == 'member' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked member ")
 				return lock_group_membermod(msg, data, target)
@@ -1763,11 +1726,6 @@ local function run(msg, matches)
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked sticker posting")
 				return unlock_group_sticker(msg, data, target)
 			end
-			if matches[2] == 'badw' then
-				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked fosh")
-				return unlock_group_badw(msg, data, target)
-			end
-			
 			if matches[2] == 'contacts' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked contact posting")
 				return unlock_group_contacts(msg, data, target)
@@ -2006,7 +1964,7 @@ local function run(msg, matches)
 		end
 
 		if matches[1] == 'help' and not is_owner(msg) then
-			text = "Message /superhelp to @UnKnOwNsBoTCH in private for SuperGroup help"
+			text = "Message /superhelp to @Teleseed in private for SuperGroup help"
 			reply_msg(msg.id, text, ok_cb, false)
 		elseif matches[1] == 'help' and is_owner(msg) then
 			local name_log = user_print_name(msg.from)
@@ -2138,5 +2096,4 @@ return {
   run = run,
   pre_process = pre_process
 }
---End supergrpup.lua
---By @Rondoozle
+
