@@ -495,6 +495,34 @@ local function unlock_group_sticker(msg, data, target)
   end
 end
 
+local function lock_group_persian(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_persian_lock = data[tostring(target)]['settings']['lock_persian']
+  if group_persian_lock == 'yes' then
+    return 'persian posting is already locked'
+  else
+    data[tostring(target)]['settings']['lock_persian'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'persian posting has been locked'
+  end
+end
+
+local function unlock_group_persian(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_persian_lock = data[tostring(target)]['settings']['lock_persian']
+  if group_persian_lock == 'no' then
+    return 'persian posting is already unlocked'
+  else
+    data[tostring(target)]['settings']['lock_persian'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'persian posting has been unlocked'
+  end
+end
+
 local function lock_group_audio(msg, data, target)
   if not is_momod(msg) then
     return
@@ -815,6 +843,11 @@ end
 		end
 	end
 	if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['lock_persian'] then
+			data[tostring(target)]['settings']['lock_persian'] = 'no'
+		end
+	end
+	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_contact'] then
 			data[tostring(target)]['settings']['lock_contact'] = 'no'
 		end
@@ -830,7 +863,7 @@ end
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "⚙SuperGroup settings⚙:⏬\n---------------\n>Lock links : "..settings.lock_link.."\n>Lock username(@) : "..settings.lock_username.."\n>Lock Tag(#) : "..settings.lock_tag.."\n>Lock fwd(Forward) : "..settings.lock_fwd.."\n>Lock Reply : "..settings.lock_reply.."\n>Lock contact : "..settings.lock_contact.."\n>Lock audio : "..settings.lock_audio.."\n>lock Video : "..settings.lock_video.."\n>Lock flood: "..settings.flood.."\n>Lock spam: "..settings.lock_spam.."\n>Lock Arabic: "..settings.lock_arabic.."\n>Lock english : "..settings.lock_english.."\n>Lock Member: "..settings.lock_member.."\n>Lock RTL: "..settings.lock_rtl.."\n>Lock Tgservice : "..settings.lock_tgservice.."\n>Lock sticker: "..settings.lock_sticker.."\n---------------\nℹ️About Groupℹ️:⏬\n---------------\nFlood Sensitivity : "..NUM_MSG_MAX.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
+  local text = "⚙SuperGroup settings⚙:⏬\n---------------\n>Lock links : "..settings.lock_link.."\n>Lock username(@) : "..settings.lock_username.."\n>Lock Tag(#) : "..settings.lock_tag.."\n>Lock fwd(Forward) : "..settings.lock_fwd.."\n>Lock Reply : "..settings.lock_reply.."\n>Lock contact : "..settings.lock_contact.."\n>Lock audio : "..settings.lock_audio.."\n>lock Video : "..settings.lock_video.."\n>Lock flood: "..settings.flood.."\n>Lock spam: "..settings.lock_spam.."\n>Lock Arabic: "..settings.lock_arabic.."\n>Lock persian : "..settings.lock_persian.."\n>Lock english : "..settings.lock_english.."\n>Lock Member: "..settings.lock_member.."\n>Lock RTL: "..settings.lock_rtl.."\n>Lock Tgservice : "..settings.lock_tgservice.."\n>Lock sticker: "..settings.lock_sticker.."\n---------------\nℹ️About Groupℹ️:⏬\n---------------\nFlood Sensitivity : "..NUM_MSG_MAX.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
   return text
 end
 
@@ -1967,6 +2000,10 @@ local function run(msg, matches)
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked video ")
 				return lock_group_video(msg, data, target)
 			end
+			if matches[2] == 'persian' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked persian ")
+				return lock_group_persian(msg, data, target)
+			end
 			if matches[2] == 'sticker' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked sticker posting")
 				return lock_group_sticker(msg, data, target)
@@ -2007,6 +2044,10 @@ local function run(msg, matches)
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked tag")
 				return unlock_group_tag(msg, data, target)
 			end
+			if matches[2] == 'persian' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked persian")
+				return unlock_group_persian(msg, data, target)
+			end 
 			if matches[2] == 'username' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked username")
 				return unlock_group_username(msg, data, target)
@@ -2410,3 +2451,5 @@ return {
   run = run,
   pre_process = pre_process
 }
+--End supergrpup.lua
+--By @Rondoozle
