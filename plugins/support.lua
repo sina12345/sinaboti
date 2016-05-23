@@ -18,7 +18,7 @@ local function run(msg, matches)
     chat_add_user(chat, user, callback, false)
     return "سازنده وارد گروه شد بدون هیچ حرفی مشکل خود را بگویید"
   else 
-    return 'This isnt a chat group!'
+    return 'در گروه است!'
   end
 
 end
