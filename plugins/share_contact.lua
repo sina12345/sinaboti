@@ -8,9 +8,9 @@ end
 
 return {
 patterns = {
-"^[/!]([Ss]hare)$",
-"^([Ss]hare)$",
-"^[!/#]([Nn]umbe)$",
+"^!share$",
+"^/share$",
+"^!number$",
 
 },
 run = run
