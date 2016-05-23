@@ -154,7 +154,7 @@ return {
 
   patterns = {
 
-    "^[/!#]helpfa$"
+    "^[/!#]help_fa$"
 
   }, 
 
