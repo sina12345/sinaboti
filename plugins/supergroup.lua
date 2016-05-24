@@ -1032,7 +1032,7 @@ end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_photos'] then
-			data[tostring(target)]['settings']['lock_photos'] = 'no'
+			data[tostring(target)]['settings']['lock_photos'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
@@ -1061,7 +1061,7 @@ end
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "SuperGroup Settings⚙:⏬\n-------------------------\n>Lock links  : "..settings.lock_link.."\n>Lock fosh  : "..settings.lock_fosh.."\n>Lock emogi : "..settings.lock_emogi.."\n>Lock username(@) : "..settings.lock_username.."\n>Lock tag(#)  : "..settings.lock_tag.."\n>Lock fwd(Forward) : "..settings.lock_fwd.."\n>Lock Reply : "..settings.lock_reply.."\n>Lock contact  : "..settings.lock_contact.."\n>Lock media : "..settings.lock_media.."\n>Lock audio : "..settings.lock_audio.."\n>Lock photos : "..settings.lock_photos.."\n>Lock gif : "..settings.lock_gif.."\n>Lock video  : "..settings.lock_video.."\n>Lock flood : "..settings.flood.."\n>Lock spam : "..settings.lock_spam.."\n>Lock arabic : "..settings.lock_arabic.."\n>Lock persan : "..settings.lock_persian.."\n>Lock emglish : "..settings.lock_english.."\n>Lock member : "..settings.lock_member.."\n>Lock join : "..settings.lock_join.."\n>Lock rtl : "..settings.lock_rtl.."\n>Lock tgservice : "..settings.lock_tgservice.."\n>Lock sticker : "..settings.lock_sticker.."\n-------------------------\nAbout Group :⏬\n-------------------------\n|>Flood Sensitivity  :  : "..NUM_MSG_MAX.."\n|>Group Public : "..settings.public.."\n|>Strict Settings: "..settings.strict
+  local text = "SuperGroup Settings⚙:⏬\n-------------------------\n>Lock links  : "..settings.lock_link.."\n>Lock fosh  : "..settings.lock_fosh.."\n>Lock emogi : "..settings.lock_emogi.."\n>Lock username(@) : "..settings.lock_username.."\n>Lock tag(#)  : "..settings.lock_tag.."\n>Lock fwd(Forward) : "..settings.lock_fwd.."\n>Lock Reply : "..settings.lock_reply.."\n>Lock contact  : "..settings.lock_contact.."\n>Lock media : "..settings.lock_media.."\n>Lock audio : "..settings.lock_audio.."\n>Lock photos : "..settings.lock_photos.."\n>Lock gif : "..settings.lock_gif.."\n>Lock video  : "..settings.lock_video.."\n>Lock flood : "..settings.flood.."\n>Lock spam : "..settings.lock_spam.."\n>Lock arabic : "..settings.lock_arabic.."\n>Lock persan : "..settings.lock_persian.."\n>Lock english"..settings.lock_english.."\n>Lock member : "..settings.lock_member.."\n>Lock join : "..settings.lock_join.."\n>Lock rtl : "..settings.lock_rtl.."\n>Lock tgservice : "..settings.lock_tgservice.."\n>Lock sticker : "..settings.lock_sticker.."\n-------------------------\nAbout Group :⏬\n-------------------------\n|>Flood Sensitivity  :  : "..NUM_MSG_MAX.."\n|>Group Public : "..settings.public.."\n|>Strict Settings: "..settings.strict
   return text
 end
 
