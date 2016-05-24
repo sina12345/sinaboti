@@ -883,82 +883,82 @@ function show_supergroup_settingsmod(msg, target)
     end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['public'] then
-			data[tostring(target)]['settings']['public'] = 'no'
+			data[tostring(target)]['settings']['public'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_rtl'] then
-			data[tostring(target)]['settings']['lock_rtl'] = 'no'
+			data[tostring(target)]['settings']['lock_rtl'] = '❌'
 		end
 end
       if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_tgservice'] then
-			data[tostring(target)]['settings']['lock_tgservice'] = 'no'
+			data[tostring(target)]['settings']['lock_tgservice'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_audio'] then
-			data[tostring(target)]['settings']['lock_audio'] = 'no'
+			data[tostring(target)]['settings']['lock_audio'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_emogi'] then
-			data[tostring(target)]['settings']['lock_emogi'] = 'no'
+			data[tostring(target)]['settings']['lock_emogi'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_video'] then
-			data[tostring(target)]['settings']['lock_video'] = 'no'
+			data[tostring(target)]['settings']['lock_video'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_tag'] then
-			data[tostring(target)]['settings']['lock_tag'] = 'no'
+			data[tostring(target)]['settings']['lock_tag'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_fwd'] then
-			data[tostring(target)]['settings']['lock_fwd'] = 'no'
+			data[tostring(target)]['settings']['lock_fwd'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_username'] then
-			data[tostring(target)]['settings']['lock_username'] = 'no'
+			data[tostring(target)]['settings']['lock_username'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_reply'] then
-			data[tostring(target)]['settings']['lock_reply'] = 'no'
+			data[tostring(target)]['settings']['lock_reply'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_persian'] then
-			data[tostring(target)]['settings']['lock_persian'] = 'no'
+			data[tostring(target)]['settings']['lock_persian'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_fosh'] then
-			data[tostring(target)]['settings']['lock_fosh'] = 'no'
+			data[tostring(target)]['settings']['lock_fosh'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_contact'] then
-			data[tostring(target)]['settings']['lock_contact'] = 'no'
+			data[tostring(target)]['settings']['lock_contact'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_english'] then
-			data[tostring(target)]['settings']['lock_english'] = 'no'
+			data[tostring(target)]['settings']['lock_english'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_gif'] then
-			data[tostring(target)]['settings']['lock_gif'] = 'no'
+			data[tostring(target)]['settings']['lock_gif'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_member'] then
-			data[tostring(target)]['settings']['lock_member'] = 'no'
+			data[tostring(target)]['settings']['lock_member'] = '❌'
 		end
 	end
   local settings = data[tostring(target)]['settings']
