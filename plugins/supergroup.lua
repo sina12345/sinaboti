@@ -6,7 +6,7 @@ local function check_member_super(cb_extra, success, result)
   local msg = cb_extra.msg
   if success == 0 then
 	send_large_msg(receiver, "Promote me to admin first!")
-  end
+  end@
   for k,v in pairs(result) do
     local member_id = v.peer_id
     if member_id ~= our_id then
@@ -2442,7 +2442,7 @@ local function run(msg, matches)
 		end
 
 		if matches[1] == 'help' and not is_owner(msg) then
-			text = "Message /superhelp to @UnKnOwNsBoTCH in private for SuperGroup help"
+			text = "Message /superhelp to @kiavabots in private for SuperGroup help"
 			reply_msg(msg.id, text, ok_cb, false)
 		elseif matches[1] == 'help' and is_owner(msg) then
 			local name_log = user_print_name(msg.from)
