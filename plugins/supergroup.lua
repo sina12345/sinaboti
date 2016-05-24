@@ -1,4 +1,4 @@
-﻿--Begin supergrpup.lua
+--Begin supergrpup.lua
 --Check members #Add supergroup
 local function check_member_super(cb_extra, success, result)
   local receiver = cb_extra.receiver
@@ -6,7 +6,7 @@ local function check_member_super(cb_extra, success, result)
   local msg = cb_extra.msg
   if success == 0 then
 	send_large_msg(receiver, "Promote me to admin first!")
-  end@
+  end
   for k,v in pairs(result) do
     local member_id = v.peer_id
     if member_id ~= our_id then
