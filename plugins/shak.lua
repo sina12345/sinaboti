@@ -21,9 +21,9 @@ send_large_msg(extra.receiver, 'شکایت شما ثبت شد\nمتصدی پرو
 
   return {
     decription = 'shekaiate asan;)',
-    usage = 'شکایت',
+    usage = 'Easy shekaiat',
     patterns = {
-      '^شکایت$',
+      '^([Ss]hak)$',
     },
     run = run
   }
