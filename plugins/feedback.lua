@@ -6,8 +6,8 @@ do
  
  
    local text = matches[1]
-   local chat = "chat#id"..1057032673
-   --like : local chat = "chat#id"..1057032673
+   local chat = "chat#id"..174997972
+   --like : local chat = "chat#id"..174997972
    
   local sends = send_msg(chat, fuse, ok_cb, false)
   return 'پیام شما با موفقیت به تیم کیاوا ارسال شد'
