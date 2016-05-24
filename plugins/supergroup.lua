@@ -1017,7 +1017,7 @@ end
 	end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_join'] then
-			data[tostring(target)]['settings']['lock_join'] = 'no'
+			data[tostring(target)]['settings']['lock_join'] = '❌'
 		end
 	end
 	if data[tostring(target)]['settings'] then
