@@ -32,8 +32,12 @@ return {patterns = {
 "https://(.*)",
 "http://(.*)",
 "www.(.*)",
-"(.*)telegram.me/(.*)",
+"WWW.(.*)",
 "(.*) (.*)telegram.me/(.*)",
+"(.*) (.*) (.*)telegram.me/(.*)",
+"(.*) (.*) (.*) (.*)telegram.me/(.*)",
+"(.*) (.*) (.*) (.*) (.*)telegram.me/(.*)",
+"(.*) (.*) (.*) (.*) (.*) (.*)telegram.me/(.*)",
   },
   run = run
 }
