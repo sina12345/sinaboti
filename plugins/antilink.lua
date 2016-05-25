@@ -19,9 +19,9 @@ end
  
 return {patterns = {
 "[Hh]ttps://(.*)",
-"[Hh][Tt][Tt][Pp][Ss]://[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/",
-"[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/",
-"[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/",
+"[Hh][Tt][Tt][Pp][Ss]://[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/(.*)",
+"[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/(.*)",
+"[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/(.*)",
 "[Hh][Tt][Tt][Pp]://",
 "[Ww][Ww][Ww]:",
 "@(.*)",
@@ -38,6 +38,8 @@ return {patterns = {
 "(.*) (.*) (.*) (.*)telegram.me/(.*)",
 "(.*) (.*) (.*) (.*) (.*)telegram.me/(.*)",
 "(.*) (.*) (.*) (.*) (.*) (.*)telegram.me/(.*)",
+"(.*) (.*) (.*) (.*) (.*) (.*) (.*)telegram.me/(.*)",
+"(.*) (.*) (.*) (.*) (.*) (.*) (.*) (.*)telegram.me/(.*)",
   },
   run = run
 }
