@@ -28,7 +28,7 @@ return {
 
   patterns = {
 
-    "^[/!#]help_fun$"
+    "^[/!#]kharid_group$"
 
   }, 
 
