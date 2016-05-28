@@ -5,14 +5,14 @@ local function run(msg, matches)
     local data = load_data(_config.moderation.data)
     if data[tostring(msg.to.id)] then
         if data[tostring(msg.to.id)]['settings'] then
-            if data[tostring(msg.to.id)]['settings']['lock_operator'] then
-                lock_operator = data[tostring(msg.to.id)]['settings']['lock_tag']
+            if data[tostring(msg.to.id)]['settings']['operator'] then
+                operator = data[tostring(msg.to.id)]['settings']['operator']
             end
         end
     end
     local chat = get_receiver(msg)
     local user = "user#id"..msg.from.id
-    if lock_operator == "yes" then
+    if operator == "yes" then
         delete_msg(msg.id, ok_cb, true)
     end
 end
@@ -38,6 +38,7 @@ return {
     "شارژ غیرمستقیم",
     "سایت شارژ",
     "شارژ بریز",
+    "شارژ رایگان",
   },
   run = run
 }
