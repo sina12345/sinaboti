@@ -7,7 +7,7 @@
 
 
    local text = matches[1]
-   local chat = "chat#id"..1065472094
+   local chat = "chat#id"..147237496
 
   local sends = send_msg(chat, fuse, ok_cb, true)
   return '✅ Message successfully sent'
@@ -21,7 +21,7 @@
   usage = "feedback: Send A Message To Admins.",
   patterns = {
   "^نظر (.*)$",
-  "^[Ff][Ee][Ee][Dd][Bb][Aa][Cc][Kk] (.*)$",
+  "^![Ff][Ee][Ee][Dd][Bb][Aa][Cc][Kk] (.*)$",
   
   },
   run = run
