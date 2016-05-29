@@ -2309,7 +2309,7 @@ local function run(msg, matches)
 			end
 		end
 
-		if matches[1] == 'switch,lock' and is_momod(msg) then
+		if matches[1] == 'lock' and is_momod(msg) then
 			local target = msg.to.id
 			     if matches[2] == 'all' then
       	local safemode ={
@@ -2541,7 +2541,7 @@ local function run(msg, matches)
 			end
 		end
 
-		if matches[1] == 'unswitch,unlock' and is_momod(msg) then
+		if matches[1] == 'unlock' and is_momod(msg) then
 			local target = msg.to.id
 			     if matches[2] == 'all' then
       	local dsafemode ={
