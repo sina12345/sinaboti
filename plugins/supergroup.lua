@@ -839,7 +839,7 @@ local function lock_group_easy(msg, data, target)
     return
   end
   local group_easy_lock = data[tostring(target)]['settings']['lock_easy']
-  if group_easy_lock == '✅ then
+  if group_easy_lock == '✅' then
     return 'easy group is trafic yes'
   else
     data[tostring(target)]['settings']['lock_easy'] = '✅'
