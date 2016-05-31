@@ -260,24 +260,18 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {174997972,173291969,197196373,147237496,0,tonumber(our_id)},--Sudo users
+    sudo_users = {87092076,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[kiavaprotection v4
+    about_text = [[avaprotection v4
 An advanced administration bot based on TG-CLI written in Lua
 
 Admins
-@kiava_ir [admin]
-@Mohammad_NBG [Admin]
+@Sinazh1 [admin]
 
 
-Our channels
-@kiavaprotection [persian]
-
-Our website 
-http://kiava.ir/
 ]],
     help_text_realm = [[Realm Help text]],
-    help_text = [[🚀راهنمایی ربات پیشرفته کیاوا🚀
+    help_text = [[راهنمایی ربات پیشرفته اوا🚀
 
 برای دریافت دستورات مدیریت گروه به زبان فارسی⏬
 /help_fa
